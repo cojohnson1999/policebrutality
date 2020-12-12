@@ -1,0 +1,47 @@
+p {
+  font-size: 16px;
+}
+
+h5 {
+  text-align: center;
+}
+
+#col1 {
+  float: left;
+  width: 46%;
+  transition-duration: 1s;
+}
+
+#col2 {
+  float: right;
+  width: 46%;
+  transition-duration: 1s;
+}
+
+#col1:hover {
+  width: 100%;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+#col1:hover ~ #col2 {
+  width: 0;
+  transition-duration: 1.5s;
+}
+
+#col2:hover {
+  width: 100%;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#container:hover > #col1:not(:hover) {
+  width: 0;
+  transition-duration: 1.5s;
+}
+
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
